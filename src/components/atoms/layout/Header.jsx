@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Header = () => {
   return (
     <SHeader>
-      <SLink to="/">HOME</SLink>
+      <SLink to="/top">TOP</SLink>
       <SLink to="/users">USERS</SLink>
     </SHeader>
   );
