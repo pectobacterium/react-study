@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { BrowserRouter, Link } from "react-router-dom";
 import { ChildArea } from "./components/ChildArea";
 import { InlineStyle } from "./components/InlineStyle";
+import { UserProvider } from "./components/providers/UserProvider";
 import { Router } from "./router/Router";
 import "./styles.css";
 
@@ -29,7 +30,9 @@ export default function App() {
         <button onClick={onClickOpen}>表示</button>
         <ChildArea open={open} onClickClose={onClickClose} /> */}
       </div>
-      <Router />
+      <UserProvider>
+        <Router />
+      </UserProvider>
     </BrowserRouter>
   );
 }
